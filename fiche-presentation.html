@@ -379,6 +379,28 @@
     }
     .play-btn:hover { transform: scale(1.1); background: #bde87c; }
 
+    .play-btn.is-playing { font-size: 0; }
+    .play-btn.is-playing::before,
+    .play-btn.is-playing::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 16px;
+      background: #073b35;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%);
+      border-radius: 2px;
+    }
+    .play-btn.is-playing::before { margin-left: -7px; }
+    .play-btn.is-playing::after  { margin-left:  3px; }
+
+    /* Safari */
+    @supports (-webkit-hyphens: none) {
+      .play-btn.is-playing::before { margin-left: -6px; }
+      .play-btn.is-playing::after  { margin-left:  2px; }
+    }
+
     /* ── WAVEFORM ── */
     .waveform {
       flex: 1;
@@ -525,7 +547,7 @@
     .unique-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+      gap: 20px;
     }
 
     .unique-card {
@@ -568,7 +590,7 @@
       .bio p { font-size: 20px; }
       .audio { grid-template-columns: 1fr; }
       .metier-row { grid-template-columns: 1fr; }
-      .unique-grid { grid-template-columns: 1fr; }
+      .unique-grid { grid-template-columns: 1fr; gap: 14px; }
       .page { padding: 22px 20px 32px; }
       .leaf-tr { font-size: 92px; }
       .leaf-bl { font-size: 98px; }
@@ -642,7 +664,7 @@
           <div class="row">
             <div class="info-icon"><img src="https://img.icons8.com/ios/48/FFFFFF/user.png" alt=""></div>
             <div class="row-text">
-              <span class="label">VRAI NOM</span>
+              <span class="label">NOM</span>
               <span class="value">Joé Gilles</span>
             </div>
           </div>
@@ -803,17 +825,17 @@
     });
 
     audio.addEventListener('play', () => {
-      btn.textContent = '⏸';
+      btn.classList.add('is-playing');
       wf.classList.add('playing');
     });
 
     audio.addEventListener('pause', () => {
-      btn.textContent = '▶';
+      btn.classList.remove('is-playing');
       wf.classList.remove('playing');
     });
 
     audio.addEventListener('ended', () => {
-      btn.textContent = '▶';
+      btn.classList.remove('is-playing');
       wf.classList.remove('playing');
       timer.textContent = '0:00 / ' + fmt(audio.duration || 0);
     });
