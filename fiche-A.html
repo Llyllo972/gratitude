@@ -52,15 +52,6 @@
     .hibiscus-bl { left: 30px; bottom: 30px; font-size: 66px; }
 
     /* ── ZIG-ZAG TEAL (haut-droite de la carte) ── */
-    .disque-or {
-      position: fixed;
-      top: 5px;
-      right: 24px;
-      width: 242px;
-      height: auto;
-      z-index: 3;
-      will-change: transform;
-    }
 
     /* ── TOP GRID ── */
     .top {
@@ -575,7 +566,6 @@
     <!-- Botanicals -->
 
     <!-- Disque d'or haut-droite -->
-    <img class="disque-or" src="assets/disque-d-or.png" alt="Disque d'or">
 
     <!-- TOP : photo + titre + infos -->
     <section class="top">
@@ -793,10 +783,9 @@
   <script>
     /* ── Parallax disque d'or + micro ── */
     (function () {
-      var disque    = document.querySelector('.disque-or');
-      var mic       = document.querySelector('.mic-deco');
-      var topBlock  = document.querySelector('section.top');
-      var photoEl   = document.querySelector('.photo');
+      var mic      = document.querySelector('.mic-deco');
+      var topBlock = document.querySelector('section.top');
+      var photoEl  = document.querySelector('.photo');
       if (!topBlock) return;
       var raf = window.requestAnimationFrame || window.webkitRequestAnimationFrame || function(cb){ cb(); };
       var ticking = false;
@@ -804,28 +793,12 @@
       function onScroll() {
         if (!ticking) {
           raf(function () {
-            var offset     = window.pageYOffset;
-            var blockBot   = topBlock.getBoundingClientRect().bottom;   // > 0 = encore visible
-            var photoBot   = photoEl ? photoEl.getBoundingClientRect().bottom : blockBot;
-
-            /* Disque : parallax vertical + fondu vers la fin de section.top */
-            if (disque) {
-              if (blockBot > 0) {
-                var fadeZone = 200; /* commence à fondre quand il reste 200px */
-                var opacity  = blockBot < fadeZone ? blockBot / fadeZone : 1;
-                disque.style.opacity   = opacity;
-                disque.style.transform = 'translateY(' + Math.min(offset * 0.0001, 0.01) + 'px)';
-              } else {
-                disque.style.opacity = '0';
-              }
-            }
+            var offset   = window.pageYOffset;
+            var photoBot = photoEl ? photoEl.getBoundingClientRect().bottom : 0;
 
             /* Micro : parallax horizontal tant que la photo est dans la vue */
-            if (mic) {
-              if (photoBot > 0) {
-                mic.style.transform = 'translateX(' + (offset * 0.25) + 'px) translateY(35%)';
-              }
-              /* une fois la photo hors vue : on fige le micro à sa position */
+            if (mic && photoBot > 0) {
+              mic.style.transform = 'translateX(' + (offset * 0.25) + 'px) translateY(35%)';
             }
 
             ticking = false;
