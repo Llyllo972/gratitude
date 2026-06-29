@@ -9,9 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg:     #062f2b;
-      --card:   #073b35;
-      --green:  #a8d96d;
+      --bg:     #2b062f;
+      --card:   #35073b;
+      --green:  #c46dd9;
       --mint:   #4ecdc4;
       --coral:  #f36f72;
       --yellow: #f5c84b;
@@ -25,7 +25,7 @@
 
     body {
       font-family: 'Nunito', 'Trebuchet MS', Arial, sans-serif;
-      background: radial-gradient(circle at 22% 12%, #0d5a4b 0%, var(--bg) 58%);
+      background: radial-gradient(circle at 22% 12%, #1a0452 0%, var(--bg) 58%);
       color: var(--text);
       min-height: 100vh;
       padding: 28px 16px 48px;
@@ -41,7 +41,7 @@
       position: relative;
       overflow: hidden;
       box-shadow: 0 32px 80px #0009;
-      background: linear-gradient(148deg, #062b28 0%, #083a33 100%);
+      background: linear-gradient(148deg, #28062b 0%, #33083a 100%);
     }
 
     /* ── BOTANICALS ── */
@@ -73,7 +73,7 @@
 
     .tape {
       position: absolute;
-      background: rgba(147, 200, 133, .62);
+      background: rgba(185, 133, 200, .62);
       width: 148px;
       height: 40px;
       left: 58px;
@@ -89,7 +89,7 @@
       bottom: 28px;
       left: 0;
       transform: translateX(0) translateY(35%);
-      width: 100px;
+      width: 50px;
       height: auto;
       z-index: 25;
       filter:
@@ -117,7 +117,7 @@
       overflow: hidden;
       transform: rotate(-2deg);
       box-shadow: 0 16px 38px #0008;
-      background: #0b4b43;
+      background: #430b4b;
       margin-top: 22px;
     }
 
@@ -225,7 +225,7 @@
       margin-top: 34px;
       border: 2px dashed rgba(168,217,109,.48);
       border-radius: 24px;
-      background: rgba(6,47,43,.74);
+      background: rgba(43,6,47,.74);
       padding: 30px 20px 36px 32px;
       position: relative;
       z-index: 5;
@@ -237,7 +237,7 @@
       font-family: 'Patrick Hand', cursive;
       display: inline-block;
       background: var(--green);
-      color: #092d28;
+      color: #28092d;
       font-size: 34px;
       font-weight: 400;
       padding: 5px 24px;
@@ -256,7 +256,7 @@
     .kw-lire     { color: #ff6b6b;   font-weight: 700; }
     .kw-dessiner { color: var(--yellow); font-weight: 700; }
     .kw-sport    { color: var(--mint);   font-weight: 700; }
-    .kw-sciences { color: #7bc67e;   font-weight: 700; }
+    .kw-sciences { color: #a47bc6;   font-weight: 700; }
     .kw-veto     { color: var(--mint);   font-weight: 700; }
 
 
@@ -265,7 +265,7 @@
       margin-top: 28px;
       border: 2px dashed rgba(168,217,109,.42);
       border-radius: 24px;
-      background: rgba(6,47,43,.74);
+      background: rgba(43,6,47,.74);
       padding: 28px 36px 32px;
       position: relative;
       z-index: 4;
@@ -296,7 +296,7 @@
     .player {
       height: 72px;
       border-radius: 40px;
-      background: #092724;
+      background: #240927;
       border: 1px solid rgba(223,255,224,.2);
       display: flex;
       align-items: center;
@@ -316,7 +316,7 @@
       border: 0;
       background: var(--green);
       font-size: 20px;
-      color: #073b35;
+      color: #35073b;
       cursor: pointer;
       display: grid;
       place-items: center;
@@ -324,7 +324,7 @@
       flex-shrink: 0;
       line-height: 1;
     }
-    .play-btn:hover { transform: scale(1.1); background: #bde87c; }
+    .play-btn:hover { transform: scale(1.1); background: #d8bde8; }
 
     .play-btn.is-playing { font-size: 0; }
     .play-btn.is-playing::before,
@@ -333,7 +333,7 @@
       position: absolute;
       width: 4px;
       height: 16px;
-      background: #073b35;
+      background: #35073b;
       top: 50%;
       left: 50%;
       transform: translateY(-50%);
@@ -388,7 +388,7 @@
       margin-top: 24px;
       border: 2px dashed rgba(168,217,109,.42);
       border-radius: 24px;
-      background: rgba(6,47,43,.74);
+      background: rgba(43,6,47,.74);
       padding: 28px 32px 32px;
       position: relative;
     }
@@ -596,7 +596,6 @@
 
       <!-- Titre -->
       <h1>Michaëlle<br><span class="green">JEAN</span>
-        <div class="underline"></div>
       </h1>
 
       <!-- Infos -->
@@ -658,7 +657,7 @@
 
     <!-- PARCOURS -->
     <section class="section-card">
-      <span class="section-tag" style="background:var(--mint);color:#092d28">PARCOURS</span>
+      <span class="section-tag" style="background:var(--mint);color:#28092d">PARCOURS</span>
       <div class="timeline">
         <div class="tl-item">
           <div class="tl-date">Enfance</div>
