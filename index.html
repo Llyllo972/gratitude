@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet Gratitude</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:     #062f2b;
+      --card:   #073b35;
+      --green:  #a8d96d;
+      --mint:   #4ecdc4;
+      --coral:  #f36f72;
+      --yellow: #f5c84b;
+      --pink:   #e8547a;
+      --text:   #fff8e8;
+      --muted:  #d6eadf;
+      --gold:   rgba(168,217,109,.38);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', 'Trebuchet MS', Arial, sans-serif;
+      background: radial-gradient(circle at 22% 12%, #0d5a4b 0%, var(--bg) 58%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 28px 16px 48px;
+    }
+
+    .page {
+      width: min(900px, 94vw);
+      margin: 0 auto;
+      padding: 48px 40px 56px;
+      border: 2px solid var(--gold);
+      border-radius: 28px;
+      background: linear-gradient(148deg, #062b28 0%, #083a33 100%);
+      box-shadow: 0 32px 80px #0009;
+    }
+
+    h1 {
+      font-family: 'Patrick Hand', cursive;
+      font-size: 54px;
+      line-height: 1.06;
+      margin: 0 0 12px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      font-weight: 400;
+    }
+
+    .green { color: var(--green); }
+
+    .underline {
+      height: 4px;
+      background: linear-gradient(90deg, var(--coral), var(--green));
+      border-radius: 99px;
+      width: 290px;
+      margin-bottom: 48px;
+    }
+
+    .tag {
+      font-family: 'Patrick Hand', cursive;
+      display: inline-block;
+      background: var(--green);
+      color: #092d28;
+      font-size: 30px;
+      font-weight: 400;
+      padding: 5px 24px;
+      border-radius: 10px;
+      transform: rotate(-2deg);
+      margin-bottom: 28px;
+    }
+
+    .bloc {
+      border: 2px dashed rgba(168,217,109,.42);
+      border-radius: 24px;
+      background: rgba(6,47,43,.74);
+      padding: 30px 32px 36px;
+    }
+
+    .artist-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .artist-list li a {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      text-decoration: none;
+      color: var(--text);
+      font-family: 'Patrick Hand', cursive;
+      font-size: 26px;
+      padding: 14px 20px;
+      border-radius: 14px;
+      border: 1px solid rgba(168,217,109,.25);
+      background: rgba(255,255,255,.04);
+      transition: background .18s, transform .18s;
+    }
+
+    .artist-list li a:hover {
+      background: rgba(168,217,109,.12);
+      transform: translateX(6px);
+    }
+
+    .artist-list li a .name { flex: 1; }
+
+    .artist-list li a .arrow {
+      font-size: 20px;
+      color: var(--green);
+      opacity: .7;
+    }
+
+    .letter {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #092d28;
+      display: grid;
+      place-items: center;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    p.intro {
+      font-size: 19px;
+      line-height: 1.65;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1>Projet<br><span class="green">Gratitude</span></h1>
+    <div class="underline"></div>
+
+    <div class="tag">PRÉSENTATION</div>
+
+    <div class="bloc">
+      <p class="intro">
+        Une collection de fiches dédiées aux personnalités haïtiennes qui nous inspirent.
+        Découvre leur parcours, leurs talents et leur lien avec Haïti.
+      </p>
+
+      <ul class="artist-list">
+        <li><a href="fiche-A.html"><span class="letter">A</span><span class="name">Joé Dwèt Filé</span><span class="arrow">→</span></a></li>
+        <li><a href="fiche-B.html"><span class="letter">B</span><span class="name">Melchie Daëlle Dumornay</span><span class="arrow">→</span></a></li>
+        <li><a href="fiche-C.html"><span class="letter">C</span><span class="name">Abigaïl ALEXANDRE</span><span class="arrow">→</span></a></li>
+        <li><a href="fiche-D.html"><span class="letter">D</span><span class="name">Anie ALERTE</span><span class="arrow">→</span></a></li>
+        <li><a href="fiche-E.html"><span class="letter">E</span><span class="name">Ariana MILAGRO LAFOND</span><span class="arrow">→</span></a></li>
+        <li><a href="fiche-F.html"><span class="letter">F</span><span class="name">Dany LAFERRIÈRE</span><span class="arrow">→</span></a></li>
+        <li><a href="fiche-G.html"><span class="letter">G</span><span class="name">Frankétienne</span><span class="arrow">→</span></a></li>
+        <li><a href="fiche-H.html"><span class="letter">H</span><span class="name">James GERMAIN</span><span class="arrow">→</span></a></li>
+        <li><a href="fiche-I.html"><span class="letter">I</span><span class="name">Mètrès THÒYA</span><span class="arrow">→</span></a></li>
+        <li><a href="fiche-J.html"><span class="letter">J</span><span class="name">Michaëlle JEAN</span><span class="arrow">→</span></a></li>
+        <li><a href="fiche-K.html"><span class="letter">K</span><span class="name">Mikaben</span><span class="arrow">→</span></a></li>
+        <li><a href="fiche-L.html"><span class="letter">L</span><span class="name">Naïka</span><span class="arrow">→</span></a></li>
+        <li><a href="fiche-M.html"><span class="letter">M</span><span class="name">Robert MARTINO</span><span class="arrow">→</span></a></li>
+        <li><a href="fiche-N.html"><span class="letter">N</span><span class="name">SHOUBOU</span><span class="arrow">→</span></a></li>
+        <li><a href="fiche-O.html"><span class="letter">O</span><span class="name">Tonton Bicha</span><span class="arrow">→</span></a></li>
+        <li><a href="fiche-P.html"><span class="letter">P</span><span class="name">Wyclef JEAN</span><span class="arrow">→</span></a></li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
