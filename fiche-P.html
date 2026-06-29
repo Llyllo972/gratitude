@@ -9,23 +9,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg:     #062f2b;
-      --card:   #073b35;
-      --green:  #a8d96d;
-      --mint:   #4ecdc4;
-      --coral:  #f36f72;
-      --yellow: #f5c84b;
-      --pink:   #e8547a;
+      --bg:     #c40234;
+      --card:   #a00228;
+      --green:  #8fc93a;
+      --mint:   #00a3a3;
+      --coral:  #ff4f00;
+      --yellow: #ff8c00;
+      --pink:   #e21d1a;
       --text:   #fff8e8;
-      --muted:  #d6eadf;
-      --gold:   rgba(168,217,109,.38);
+      --muted:  #99e4ff;
+      --gold:   rgba(255,140,0,.42);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Nunito', 'Trebuchet MS', Arial, sans-serif;
-      background: radial-gradient(circle at 22% 12%, #0d5a4b 0%, var(--bg) 58%);
+      background: radial-gradient(circle at 22% 12%, #e21d1a 0%, var(--bg) 58%);
       color: var(--text);
       min-height: 100vh;
       padding: 28px 16px 48px;
@@ -41,7 +41,7 @@
       position: relative;
       overflow: hidden;
       box-shadow: 0 32px 80px #0009;
-      background: linear-gradient(148deg, #062b28 0%, #083a33 100%);
+      background: linear-gradient(148deg, #a00228 0%, #8b001e 100%);
     }
 
     /* ── BOTANICALS ── */
@@ -73,7 +73,7 @@
 
     .tape {
       position: absolute;
-      background: rgba(147, 200, 133, .62);
+      background: rgba(255, 140, 0, .62);
       width: 148px;
       height: 40px;
       left: 58px;
@@ -117,7 +117,7 @@
       overflow: hidden;
       transform: rotate(-2deg);
       box-shadow: 0 16px 38px #0008;
-      background: #0b4b43;
+      background: #a00228;
       margin-top: 22px;
     }
 
@@ -153,7 +153,7 @@
     .green   { color: var(--green); }
     .underline {
       height: 4px;
-      background: linear-gradient(90deg, var(--coral), var(--green));
+      background: linear-gradient(90deg, var(--yellow), var(--mint));
       border-radius: 99px;
       width: 290px;
       margin-top: 14px;
@@ -223,9 +223,9 @@
     /* ── BIO ── */
     .bio {
       margin-top: 34px;
-      border: 2px dashed rgba(168,217,109,.48);
+      border: 2px dashed rgba(255,140,0,.48);
       border-radius: 24px;
-      background: rgba(6,47,43,.74);
+      background: rgba(100,0,30,.74);
       padding: 30px 20px 36px 32px;
       position: relative;
       z-index: 5;
@@ -237,7 +237,7 @@
       font-family: 'Patrick Hand', cursive;
       display: inline-block;
       background: var(--green);
-      color: #092d28;
+      color: #6b0010;
       font-size: 34px;
       font-weight: 400;
       padding: 5px 24px;
@@ -255,17 +255,17 @@
     .bio em  { color: var(--pink);   font-style: normal; font-weight: 700; }
     .kw-lire     { color: #ff6b6b;   font-weight: 700; }
     .kw-dessiner { color: var(--yellow); font-weight: 700; }
-    .kw-sport    { color: var(--mint);   font-weight: 700; }
-    .kw-sciences { color: #7bc67e;   font-weight: 700; }
-    .kw-veto     { color: var(--mint);   font-weight: 700; }
+    .kw-sport    { color: var(--muted);   font-weight: 700; }
+    .kw-sciences { color: #8fc93a;   font-weight: 700; }
+    .kw-veto     { color: var(--muted);   font-weight: 700; }
 
 
     /* ── AUDIO ── */
     .audio {
       margin-top: 28px;
-      border: 2px dashed rgba(168,217,109,.42);
+      border: 2px dashed rgba(255,140,0,.42);
       border-radius: 24px;
-      background: rgba(6,47,43,.74);
+      background: rgba(100,0,30,.74);
       padding: 28px 36px 32px;
       position: relative;
       z-index: 4;
@@ -278,7 +278,7 @@
     .audio-title {
       font-family: 'Patrick Hand', cursive;
       font-size: 30px;
-      color: var(--green);
+      color: #8fc93a;
       text-transform: uppercase;
       font-weight: 400;
       margin-bottom: 4px;
@@ -286,7 +286,7 @@
 
     .audio-desc {
       font-size: 19px;
-      color: var(--muted);
+      color: #ffffff;
       margin-bottom: 16px;
       font-family: 'Nunito', sans-serif;
     }
@@ -296,7 +296,7 @@
     .player {
       height: 72px;
       border-radius: 40px;
-      background: #092724;
+      background: #7a0020;
       border: 1px solid rgba(223,255,224,.2);
       display: flex;
       align-items: center;
@@ -314,9 +314,9 @@
       height: 50px;
       border-radius: 50%;
       border: 0;
-      background: var(--green);
+      background: #8fc93a;
       font-size: 20px;
-      color: #073b35;
+      color: #a00228;
       cursor: pointer;
       display: grid;
       place-items: center;
@@ -324,7 +324,7 @@
       flex-shrink: 0;
       line-height: 1;
     }
-    .play-btn:hover { transform: scale(1.1); background: #bde87c; }
+    .play-btn:hover { transform: scale(1.1); background: #ffaa33; }
 
     .play-btn.is-playing { font-size: 0; }
     .play-btn.is-playing::before,
@@ -333,7 +333,7 @@
       position: absolute;
       width: 4px;
       height: 16px;
-      background: #073b35;
+      background: #a00228;
       top: 50%;
       left: 50%;
       transform: translateY(-50%);
@@ -362,7 +362,7 @@
       flex-shrink: 0;
       width: 4px;
       border-radius: 2px;
-      background: var(--green);
+      background: #8fc93a;
       transform-origin: center bottom;
       animation: bar-pulse 0.7s ease-in-out infinite alternate;
       animation-play-state: paused;
@@ -377,7 +377,7 @@
 
     .time {
       font-size: 18px;
-      color: var(--muted);
+      color: #ffffff;
       flex-shrink: 0;
       font-family: 'Nunito', sans-serif;
     }
@@ -386,9 +386,9 @@
     /* ── SECTIONS GÉNÉRIQUES ── */
     .section-card {
       margin-top: 24px;
-      border: 2px dashed rgba(168,217,109,.42);
+      border: 2px dashed rgba(255,140,0,.42);
       border-radius: 24px;
-      background: rgba(6,47,43,.74);
+      background: rgba(100,0,30,.74);
       padding: 28px 32px 32px;
       position: relative;
     }
@@ -453,7 +453,7 @@
       top: 8px;
       bottom: 8px;
       width: 2px;
-      background: linear-gradient(to bottom, var(--green), var(--mint));
+      background: linear-gradient(to bottom, var(--yellow), var(--mint));
       border-radius: 2px;
       opacity: .55;
     }
@@ -469,8 +469,8 @@
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 6px rgba(168,217,109,.5);
+      background: #ff4f00;
+      box-shadow: 0 0 6px rgba(255,79,0,.5);
     }
 
     .tl-date {
@@ -483,11 +483,11 @@
     .tl-text {
       font-family: 'Nunito', sans-serif;
       font-size: 17px;
-      color: var(--text);
+      color: #ffffff;
       line-height: 1.55;
     }
 
-    .tl-text em { color: var(--mint); font-style: normal; }
+    .tl-text em { color: #ffffff; font-style: normal; }
     .tl-text strong { color: var(--green); }
 
     /* ── CE QUI LE REND UNIQUE ── */
@@ -499,7 +499,7 @@
 
     .unique-card {
       background: rgba(255,255,255,.06);
-      border: 1px solid rgba(168,217,109,.28);
+      border: 1px solid rgba(255,140,0,.28);
       border-radius: 14px;
       padding: 16px 12px;
       text-align: center;
@@ -511,7 +511,7 @@
     .unique-label {
       font-family: 'Patrick Hand', cursive;
       font-size: 16px;
-      color: var(--green);
+      color: #99e4ff;
       margin-bottom: 6px;
       text-transform: uppercase;
     }
@@ -519,7 +519,7 @@
     .unique-text {
       font-family: 'Nunito', sans-serif;
       font-size: 14px;
-      color: var(--muted);
+      color: #ffffff;
       line-height: 1.45;
     }
 
@@ -590,13 +590,12 @@
           <img src="assets/photos/Wyclef-JEAN.jpg" alt="Wyclef JEAN"
                style="width:100%;height:100%;object-fit:cover;object-position:top center;">
         </div>
-        <img class="mic-deco" src="assets/micro.png" alt="">
+        <img class="mic-deco" src="assets/crampon.png" alt="">
         <div class="slashes">/ /</div>
       </div>
 
       <!-- Titre -->
       <h1>Wyclef<br><span class="green">JEAN</span>
-        <div class="underline"></div>
       </h1>
 
       <!-- Infos -->
@@ -605,106 +604,132 @@
             <div class="info-icon"><img src="https://img.icons8.com/ios/48/FFFFFF/user.png" alt=""></div>
             <div class="row-text">
               <span class="label">NOM</span>
-              <span class="value">Joé Gilles</span>
+              <span class="value">Melchie Daëlle Dumornay</span>
             </div>
           </div>
           <div class="row">
             <div class="info-icon"><img src="https://img.icons8.com/ios/48/FFFFFF/calendar--v1.png" alt=""></div>
             <div class="row-text">
               <span class="label">DATE DE NAISSANCE</span>
-              <span class="value">12 mars 1995</span>
+              <span class="value">17 août 2003</span>
             </div>
           </div>
           <div class="row">
             <div class="info-icon"><img src="https://img.icons8.com/ios/48/FFFFFF/marker.png" alt=""></div>
             <div class="row-text">
               <span class="label" style="color:var(--coral)">LIEU DE NAISSANCE</span>
-              <span class="value">Paris 12e, France</span>
+              <span class="value">Mirebalais, Haïti</span>
             </div>
           </div>
           <div class="row">
             <div class="info-icon"><img src="https://img.icons8.com/ios/48/FFFFFF/globe--v1.png" alt=""></div>
             <div class="row-text">
-              <span class="label" style="color:var(--mint)">ORIGINE</span>
+              <span class="label" style="color:var(--muted)">NATIONALITÉ</span>
               <span class="value">Haïtienne</span>
             </div>
           </div>
         </div>
     </section>
 
-    <!-- BIO : QUE FAIT-IL ? -->
+    <!-- BIO : QUE FAIT-ELLE ? -->
     <section class="bio">
-      <span class="tag">PRÉSENTATION</span>
+      <span class="tag" style="background:#ff8c00;color:#fff;">PRÉSENTATION</span>
 
       <div class="metier-row">
         <div>
           <div class="metier-col-title">Métier</div>
-          <div class="metier-val">Chanteur</div>
+          <div class="metier-val">⚽ Footballeuse professionnelle</div>
         </div>
         <div>
-          <div class="metier-col-title">Talents</div>
-          <div class="badges">
-            <span class="badge" style="background:rgba(243,111,114,.18);border-color:var(--coral);color:var(--coral)">Rap</span>
-            <span class="badge" style="background:rgba(78,205,196,.18);border-color:var(--mint);color:var(--mint)">Kompa</span>
-            <span class="badge" style="background:rgba(232,84,122,.18);border-color:var(--pink);color:var(--pink)">R'n'B</span>
-          </div>
+          <div class="metier-col-title">Poste</div>
+          <div class="metier-val" style="font-size:18px">Milieu offensif / Attaquante</div>
         </div>
       </div>
 
-      <p>En 2024, il sort le single <em>4 Kampé</em>. Le titre est certifié
-      <span class="kw-dessiner">disque de diamant</span> en seulement quatre mois.</p>
+      <div class="metier-row" style="margin-top:0">
+        <div>
+          <div class="metier-col-title">Club</div>
+          <div class="metier-val" style="font-size:18px">🔴 Olympique Lyonnais Féminin</div>
+        </div>
+        <div>
+          <div class="metier-col-title">Sélection</div>
+          <div class="metier-val" style="font-size:18px">🇭🇹 Équipe nationale d'Haïti</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:16px">
+        <div class="metier-col-title" style="margin-bottom:10px">Talents</div>
+        <div class="badges">
+          <span class="badge" style="background:#ff8c00;border-color:#ff8c00;color:#fff">Technique & créativité</span>
+          <span class="badge" style="background:#00a3a3;border-color:#00a3a3;color:#fff">Vitesse & dribble</span>
+          <span class="badge" style="background:#ff4f00;border-color:#ff4f00;color:#fff">Vision du jeu</span>
+          <span class="badge" style="background:#8fc93a;border-color:#8fc93a;color:#fff">Polyvalence offensive</span>
+        </div>
+      </div>
+
+      <p>Ce qui la distingue vraiment, c'est sa <em>polyvalence offensive</em> et sa <span class="kw-sport">maturité tactique très précoce</span> — capable de marquer et de créer des occasions à un niveau mondial avant même ses 20 ans.</p>
 
     </section>
 
     <!-- PARCOURS -->
     <section class="section-card">
-      <span class="section-tag" style="background:var(--mint);color:#092d28">PARCOURS</span>
+      <span class="section-tag" style="background:var(--mint);color:#ffffff">PARCOURS</span>
       <div class="timeline">
         <div class="tl-item">
-          <div class="tl-date">Enfance</div>
-          <div class="tl-text">Initié à la musique par le <strong>gospel konpa</strong> à travers son église.</div>
+          <div class="tl-date">Débuts</div>
+          <div class="tl-text">Débuts dans le football en <strong>Haïti</strong>, très jeune, dans un contexte difficile.</div>
         </div>
         <div class="tl-item">
-          <div class="tl-date">Collaborations</div>
-          <div class="tl-text">Participe à <em>Que toi</em> (Stony), <em>Un mot</em> (Axel Tony) et <em>Mama hé</em> (Vegedream).</div>
+          <div class="tl-date">Adolescence</div>
+          <div class="tl-text">Révélée au niveau <em>international</em> à l'adolescence — impressionne par sa maturité et sa technique hors norme.</div>
         </div>
         <div class="tl-item">
-          <div class="tl-date">2019</div>
-          <div class="tl-text">Forme le groupe <strong>Lespada</strong> — mixtape puis album studio <em>À deux</em> (29 mars, 15 titres).</div>
+          <div class="tl-date">Club à l'étranger</div>
+          <div class="tl-text">Passage remarqué en club à l'étranger, s'imposant face à des joueuses bien plus expérimentées.</div>
         </div>
         <div class="tl-item">
-          <div class="tl-date">2020</div>
-          <div class="tl-text"><em>Égoïste</em> avec Singuila · <em>Tu me mens</em> · EP <em>EIRA</em> (18 avril).<br>
-          <em>Jolie Madame</em> avec Ronisia → plus gros hit Top Singles SNEP.</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-date">Tournées</div>
-          <div class="tl-text">France · Belgique · Suisse · États-Unis · Olympia (Montréal) · La Cigale (Paris).</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-date">2024</div>
-          <div class="tl-text">Single <strong>4 Kampé</strong> → <span style="color:var(--yellow)">💎 disque de diamant</span> en 4 mois.</div>
+          <div class="tl-date">Olympique Lyonnais</div>
+          <div class="tl-text">Rejoint l'<strong>Olympique Lyonnais Féminin</strong>, l'un des plus grands clubs de football féminin au monde.</div>
         </div>
       </div>
     </section>
 
-    <!-- CE QUI LE REND UNIQUE -->
+    <!-- LIEN AVEC HAÏTI -->
+    <section class="section-card">
+      <span class="section-tag" style="background:var(--coral);color:#fff">LIEN AVEC HAÏTI</span>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-text">Représente Haïti au <em>plus haut niveau international</em>.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-text"><strong>Symbole de réussite</strong> pour la jeunesse haïtienne.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-text">Met en lumière le <em>football féminin haïtien</em> sur la scène mondiale.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-text">Elle incarne une partie de la culture haïtienne : la <strong>jeunesse</strong>, le <strong>sport</strong> et l'<strong>ambition internationale</strong>.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CE QUI LA REND UNIQUE -->
     <section class="section-card" style="border:none;padding:0;background:transparent">
       <div class="unique-grid">
         <div class="unique-card">
           <div class="unique-icon"><img src="https://img.icons8.com/ios/48/FFFFFF/trophy.png" alt=""></div>
           <div class="unique-label">Qualité</div>
-          <div class="unique-text">Faiseur de <strong>tubes</strong> reconnu</div>
+          <div class="unique-text">Maturité <strong>exceptionnelle</strong> pour son âge</div>
         </div>
         <div class="unique-card">
-          <div class="unique-icon"><img src="https://img.icons8.com/ios/48/FFFFFF/musical-notes.png" alt=""></div>
+          <div class="unique-icon"><img src="https://img.icons8.com/ios/48/FFFFFF/medal.png" alt=""></div>
           <div class="unique-label">Engagement</div>
-          <div class="unique-text">Dans la musique dès l'enfance, à travers son église</div>
+          <div class="unique-text">Inspiration pour les <strong>jeunes filles</strong> en Haïti</div>
         </div>
         <div class="unique-card">
           <div class="unique-icon"><img src="https://img.icons8.com/ios/48/FFFFFF/star.png" alt=""></div>
-          <div class="unique-label">Faits marquants</div>
-          <div class="unique-text"><strong>1 disque de diamant</strong><br>+ 2 disques d'or</div>
+          <div class="unique-label">Fait marquant</div>
+          <div class="unique-text">A joué au <strong>plus haut niveau mondial</strong> avant ses 20 ans</div>
         </div>
       </div>
     </section>
@@ -715,16 +740,16 @@
         <h2 class="audio-title">
           <img src="https://img.icons8.com/ios/36/FFFFFF/headset.png" alt="" style="width:28px;height:28px;vertical-align:middle;margin-right:8px;opacity:.9;">Écouter un extrait
         </h2>
-        <p class="audio-desc">Découvre qui je suis en écoutant cet extrait audio !</p>
+        <p class="audio-desc">Découvrez Melchie Daëlle Dumornay en action !</p>
         <div class="player">
-          <button class="play-btn" id="playBtn" onclick="togglePlay()" aria-label="Lecture / Pause">▶</button>
+          <button class="play-btn" id="playBtn" aria-label="Lecture / Pause">▶</button>
           <div class="waveform" id="waveform" aria-hidden="true"></div>
-          <span class="time" id="timer">0:00 / 0:45</span>
+          <span class="time" id="timer">0:00 / 0:00</span>
         </div>
       </div>
     </section>
 
-    <p style="text-align:right;margin-top:32px;font-family:'Patrick Hand',cursive;font-size:20px;color:var(--muted);opacity:.8;">Merci à Monsieur Ralph ALLEN</p>
+    <p style="text-align:right;margin-top:32px;font-family:'Patrick Hand',cursive;font-size:20px;color:#ffffff;opacity:.8;">Merci à Monsieur Ralph ALLEN</p>
   </main>
 
   <audio id="audio" src="assets/kakaist-heartbeat-sfx-320981.mp3" preload="metadata"></audio>
@@ -744,7 +769,6 @@
       });
     })();
 
-    /* ── Lecteur audio réel ── */
     const audio = document.getElementById('audio');
     const btn   = document.querySelector('.play-btn');
     const wf    = document.getElementById('waveform');
@@ -753,41 +777,18 @@
     function pad(n) { return n < 10 ? '0' + n : String(n); }
     function fmt(s) { return Math.floor(s / 60) + ':' + pad(Math.floor(s % 60)); }
 
-    btn.addEventListener('click', () => {
-      audio.paused ? audio.play() : audio.pause();
-    });
-
-    audio.addEventListener('play', () => {
-      btn.classList.add('is-playing');
-      wf.classList.add('playing');
-    });
-
-    audio.addEventListener('pause', () => {
-      btn.classList.remove('is-playing');
-      wf.classList.remove('playing');
-    });
-
-    audio.addEventListener('ended', () => {
-      btn.classList.remove('is-playing');
-      wf.classList.remove('playing');
-      timer.textContent = '0:00 / ' + fmt(audio.duration || 0);
-    });
-
-    audio.addEventListener('timeupdate', () => {
-      timer.textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration || 0);
-    });
-
-    audio.addEventListener('loadedmetadata', () => {
-      timer.textContent = '0:00 / ' + fmt(audio.duration);
-    });
+    btn.addEventListener('click', () => { audio.paused ? audio.play() : audio.pause(); });
+    audio.addEventListener('play',  () => { btn.classList.add('is-playing');    wf.classList.add('playing'); });
+    audio.addEventListener('pause', () => { btn.classList.remove('is-playing'); wf.classList.remove('playing'); });
+    audio.addEventListener('ended', () => { btn.classList.remove('is-playing'); wf.classList.remove('playing'); timer.textContent = '0:00 / ' + fmt(audio.duration || 0); });
+    audio.addEventListener('timeupdate',     () => { timer.textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration || 0); });
+    audio.addEventListener('loadedmetadata', () => { timer.textContent = '0:00 / ' + fmt(audio.duration); });
   </script>
   <script>
     /* ── Parallax disque d'or + micro ── */
     (function () {
       var mic      = document.querySelector('.mic-deco');
-      var topBlock = document.querySelector('section.top');
       var photoEl  = document.querySelector('.photo');
-      if (!topBlock) return;
       var raf = window.requestAnimationFrame || window.webkitRequestAnimationFrame || function(cb){ cb(); };
       var ticking = false;
 
@@ -797,7 +798,7 @@
             var offset   = window.pageYOffset;
             var photoBot = photoEl ? photoEl.getBoundingClientRect().bottom : 0;
 
-            /* Micro : parallax horizontal tant que la photo est dans la vue */
+            /* Crampon : parallax horizontal tant que la photo est dans la vue */
             if (mic && photoBot > 0) {
               mic.style.transform = 'translateX(' + (offset * 0.25) + 'px) translateY(35%)';
             }
