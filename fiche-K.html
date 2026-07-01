@@ -178,7 +178,7 @@
       flex-wrap: wrap;
     }
 
-    /* Cercle conservé uniquement pour la section audio */
+    
     .picto {
       width: 46px;
       height: 46px;
@@ -259,121 +259,26 @@
     .kw-sciences { color: #6fb8ff;   font-weight: 700; }
     .kw-veto     { color: var(--mint);   font-weight: 700; }
 
-
-    /* ── AUDIO ── */
-    .audio {
-      margin-top: 28px;
-      border: 2px dashed rgba(0,80,157,.42);
-      border-radius: 24px;
-      background: rgba(3,23,44,.74);
-      padding: 28px 36px 32px;
-      position: relative;
-      z-index: 4;
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 22px;
-      align-items: center;
-    }
-
-    .audio-title {
-      font-family: 'Patrick Hand', cursive;
-      font-size: 30px;
-      color: var(--green);
-      text-transform: uppercase;
-      font-weight: 400;
-      margin-bottom: 4px;
-    }
-
-    .audio-desc {
-      font-size: 19px;
-      color: var(--muted);
-      margin-bottom: 16px;
-      font-family: 'Nunito', sans-serif;
-    }
-
+    
 
     /* ── PLAYER ── */
-    .player {
-      height: 72px;
-      border-radius: 40px;
-      background: #021219;
-      border: 1px solid rgba(174,216,255,.2);
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      padding: 0 20px;
-      width: 100%;
-      box-sizing: border-box;
-      min-width: 0;
-    }
+    
 
-    .waveform { min-width: 0; }
+    
 
-    .play-btn {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 0;
-      background: var(--green);
-      font-size: 20px;
-      color: #041d37;
-      cursor: pointer;
-      display: grid;
-      place-items: center;
-      transition: transform .15s, background .15s;
-      flex-shrink: 0;
-      line-height: 1;
-    }
-    .play-btn:hover { transform: scale(1.1); background: #aed8ff; }
+    
+    
 
-    .play-btn.is-playing { font-size: 0; }
-    .play-btn.is-playing::before,
-    .play-btn.is-playing::after {
-      content: '';
-      position: absolute;
-      width: 4px;
-      height: 16px;
-      background: #041d37;
-      top: 50%;
-      left: 50%;
-      transform: translateY(-50%);
-      border-radius: 2px;
-    }
-    .play-btn.is-playing::before { margin-left: -7px; }
-    .play-btn.is-playing::after  { margin-left:  3px; }
+    
+    
+    
+    
 
-    /* Safari */
-    @supports (-webkit-hyphens: none) {
-      .play-btn.is-playing::before { margin-left: -6px; }
-      .play-btn.is-playing::after  { margin-left:  2px; }
-    }
-
-    /* ── WAVEFORM ── */
-    .waveform {
-      flex: 1;
-      height: 42px;
-      display: flex;
-      align-items: center;
-      gap: 3px;
-      overflow: hidden;
-    }
-
-    .bar {
-      flex-shrink: 0;
-      width: 4px;
-      border-radius: 2px;
-      background: var(--green);
-      transform-origin: center bottom;
-      animation: bar-pulse 0.7s ease-in-out infinite alternate;
-      animation-play-state: paused;
-    }
-
-    @keyframes bar-pulse {
-      from { transform: scaleY(.25); opacity: .5; }
+    
       to   { transform: scaleY(1);   opacity: 1;  }
     }
 
-    .waveform.playing .bar { animation-play-state: running; }
+    
 
     .time {
       font-size: 18px;
@@ -491,39 +396,18 @@
     .tl-text strong { color: var(--green); }
 
     /* ── CE QUI LE REND UNIQUE ── */
-    .unique-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+    
 
-    .unique-card {
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(0,80,157,.28);
-      border-radius: 14px;
-      padding: 16px 12px;
-      text-align: center;
-    }
+    
 
-    .unique-icon { margin-bottom: 8px; }
-    .unique-icon img { width: 32px; height: 32px; object-fit: contain; }
+    
+    
 
-    .unique-label {
-      font-family: 'Patrick Hand', cursive;
-      font-size: 16px;
-      color: var(--green);
-      margin-bottom: 6px;
-      text-transform: uppercase;
-    }
+    
 
-    .unique-text {
-      font-family: 'Nunito', sans-serif;
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.45;
-    }
+    
 
-    .unique-text strong { color: var(--yellow); }
+    
 
     /* ── RESPONSIVE ── */
     @media (max-width: 760px) {
@@ -535,9 +419,9 @@
       h1 { font-size: 40px; }
       .row-text { flex-direction: column; align-items: flex-start; gap: 0; }
       .bio p { font-size: 20px; }
-      .audio { grid-template-columns: 1fr; }
+      
       .metier-row { grid-template-columns: 1fr; }
-      .unique-grid { grid-template-columns: 1fr; gap: 14px; }
+      
       .page { padding: 22px 20px 32px; }
       .leaf-tr { font-size: 92px; }
       .leaf-bl { font-size: 98px; }
@@ -552,9 +436,9 @@
       .label, .value { font-size: 17px; }
 
       /* Player responsive */
-      .audio { padding: 18px 12px 22px; }
-      .player { height: 58px; gap: 10px; padding: 0 12px; }
-      .play-btn { width: 38px; height: 38px; font-size: 16px; }
+      
+      
+      
       .time { font-size: 13px; }
       .speaker { font-size: 18px; }
     }
@@ -687,98 +571,10 @@
       </div>
     </section>
 
-    <!-- CE QUI LE REND UNIQUE -->
-    <section class="section-card" style="border:none;padding:0;background:transparent">
-      <div class="unique-grid">
-        <div class="unique-card">
-          <div class="unique-icon"><img src="https://img.icons8.com/ios/48/FFFFFF/trophy.png" alt=""></div>
-          <div class="unique-label">Qualité</div>
-          <div class="unique-text">Faiseur de <strong>tubes</strong> reconnu</div>
-        </div>
-        <div class="unique-card">
-          <div class="unique-icon"><img src="https://img.icons8.com/ios/48/FFFFFF/musical-notes.png" alt=""></div>
-          <div class="unique-label">Engagement</div>
-          <div class="unique-text">Dans la musique dès l'enfance, à travers son église</div>
-        </div>
-        <div class="unique-card">
-          <div class="unique-icon"><img src="https://img.icons8.com/ios/48/FFFFFF/star.png" alt=""></div>
-          <div class="unique-label">Faits marquants</div>
-          <div class="unique-text"><strong>1 disque de diamant</strong><br>+ 2 disques d'or</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AUDIO -->
-    <section class="audio" style="grid-template-columns:1fr">
-      <div>
-        <h2 class="audio-title">
-          <img src="https://img.icons8.com/ios/36/FFFFFF/headset.png" alt="" style="width:28px;height:28px;vertical-align:middle;margin-right:8px;opacity:.9;">Écouter un extrait
-        </h2>
-        <p class="audio-desc">Découvre qui je suis en écoutant cet extrait audio !</p>
-        <div class="player">
-          <button class="play-btn" id="playBtn" onclick="togglePlay()" aria-label="Lecture / Pause">▶</button>
-          <div class="waveform" id="waveform" aria-hidden="true"></div>
-          <span class="time" id="timer">0:00 / 0:45</span>
-        </div>
-      </div>
-    </section>
-
     <p style="text-align:right;margin-top:32px;font-family:'Patrick Hand',cursive;font-size:20px;color:var(--muted);opacity:.8;">Gratitude à Ralph ALLEN</p>
   </main>
 
-  <audio id="audio" src="assets/kakaist-heartbeat-sfx-320981.mp3" preload="metadata"></audio>
-
   <script>
-    /* ── Waveform bars ── */
-    (function () {
-      const heights = [12,26,36,20,40,28,16,34,22,40,30,14,26,40,18,38,28,14,34,40,20,30,14,36,40,22,32,16,38,24];
-      const wf = document.getElementById('waveform');
-      heights.forEach(function (h, i) {
-        const bar = document.createElement('div');
-        bar.className = 'bar';
-        bar.style.height = h + 'px';
-        bar.style.animationDelay    = (i * 0.055).toFixed(3) + 's';
-        bar.style.animationDuration = (0.5 + (i % 5) * 0.09).toFixed(2) + 's';
-        wf.appendChild(bar);
-      });
-    })();
-
-    /* ── Lecteur audio réel ── */
-    const audio = document.getElementById('audio');
-    const btn   = document.querySelector('.play-btn');
-    const wf    = document.getElementById('waveform');
-    const timer = document.getElementById('timer');
-
-    function pad(n) { return n < 10 ? '0' + n : String(n); }
-    function fmt(s) { return Math.floor(s / 60) + ':' + pad(Math.floor(s % 60)); }
-
-    btn.addEventListener('click', () => {
-      audio.paused ? audio.play() : audio.pause();
-    });
-
-    audio.addEventListener('play', () => {
-      btn.classList.add('is-playing');
-      wf.classList.add('playing');
-    });
-
-    audio.addEventListener('pause', () => {
-      btn.classList.remove('is-playing');
-      wf.classList.remove('playing');
-    });
-
-    audio.addEventListener('ended', () => {
-      btn.classList.remove('is-playing');
-      wf.classList.remove('playing');
-      timer.textContent = '0:00 / ' + fmt(audio.duration || 0);
-    });
-
-    audio.addEventListener('timeupdate', () => {
-      timer.textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration || 0);
-    });
-
-    audio.addEventListener('loadedmetadata', () => {
-      timer.textContent = '0:00 / ' + fmt(audio.duration);
-    });
   </script>
   <script>
     /* ── Parallax disque d'or + micro ── */
