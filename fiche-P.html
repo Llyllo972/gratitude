@@ -100,6 +100,11 @@
         drop-shadow( 0px  6px 12px rgba(0,0,0,.5));
     }
 
+    .sun-link {
+      display: contents;
+      cursor: pointer;
+    }
+
     .sun {
       position: absolute;
       top: 10px;
@@ -458,7 +463,8 @@
       <!-- Polaroid -->
       <div class="photo-wrap">
         <div class="tape"></div>
-        <svg class="sun" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <a href="index.html" class="sun-link" aria-label="Retour à l'accueil">
+          <svg class="sun" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <circle cx="30" cy="30" r="10" stroke="#f5c84b" stroke-width="2.5"/>
           <!-- rayons cardinaux -->
           <line x1="30" y1="4"  x2="30" y2="14" stroke="#f5c84b" stroke-width="2.5" stroke-linecap="round"/>
@@ -471,6 +477,7 @@
           <line x1="49" y1="11" x2="42" y2="18" stroke="#f5c84b" stroke-width="2.5" stroke-linecap="round"/>
           <line x1="11" y1="49" x2="18" y2="42" stroke="#f5c84b" stroke-width="2.5" stroke-linecap="round"/>
         </svg>
+        </a>
         <div class="photo">
           <img src="assets/photos/Wyclef-JEAN.jpg" alt="Wyclef JEAN"
                style="width:100%;height:100%;object-fit:cover;object-position:top center;">
@@ -581,27 +588,6 @@
         <div class="tl-item">
           <div class="tl-date">Héritage</div>
           <div class="tl-text">Il transmet la fierté des origines haïtiennes, l'ouverture au monde et la <strong>solidarité envers son pays</strong>.</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CE QUI LA REND UNIQUE -->
-    <section class="section-card" style="border:none;padding:0;background:transparent">
-      <div class="unique-grid">
-        <div class="unique-card">
-          <div class="unique-icon"><img src="https://img.icons8.com/ios/48/FFFFFF/trophy.png" alt=""></div>
-          <div class="unique-label">Qualité</div>
-          <div class="unique-text">Maturité <strong>exceptionnelle</strong> pour son âge</div>
-        </div>
-        <div class="unique-card">
-          <div class="unique-icon"><img src="https://img.icons8.com/ios/48/FFFFFF/medal.png" alt=""></div>
-          <div class="unique-label">Engagement</div>
-          <div class="unique-text">Inspiration pour les <strong>jeunes filles</strong> en Haïti</div>
-        </div>
-        <div class="unique-card">
-          <div class="unique-icon"><img src="https://img.icons8.com/ios/48/FFFFFF/star.png" alt=""></div>
-          <div class="unique-label">Fait marquant</div>
-          <div class="unique-text">A joué au <strong>plus haut niveau mondial</strong> avant ses 20 ans</div>
         </div>
       </div>
     </section>
